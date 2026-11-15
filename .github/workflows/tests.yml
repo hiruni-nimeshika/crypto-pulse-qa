@@ -1,0 +1,27 @@
+name: QA tests
+# Runs the automated checks against the LIVE site (GitHub's servers cannot reach your laptop's localhost).
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: https://crypto-pulse.vercel.app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npx playwright install --with-deps chromium firefox
+      - run: npx playwright test --project=chromium --project=firefox
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: |
+            automation/report
+            screenshots
