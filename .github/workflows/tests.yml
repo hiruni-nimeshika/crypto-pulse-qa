@@ -9,7 +9,7 @@ jobs:
   playwright:
     runs-on: ubuntu-latest
     env:
-      BASE_URL: https://crypto-pulse-weld.vercel.app/
+      BASE_URL: https://crypto-pulse-weld.vercel.app
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
