@@ -5,7 +5,7 @@
 A quality assurance package for **Crypto Pulse**, my real-time cryptocurrency dashboard
 (React, Node.js, Express, SQLite, CoinGecko API).
 
-- **Live app:** https://crypto-pulse.vercel.app
+- **Live app:** [https://crypto-pulse.vercel.app](https://crypto-pulse-weld.vercel.app/)
 - **App source:** https://github.com/hiruni-nimeshika/crypto-pulse
 
 > Fill the results below in only after you have run the tests. Replace every `[...]` with your real numbers.
